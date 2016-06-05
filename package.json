@@ -1,0 +1,23 @@
+{
+  "name": "",
+  "description": "",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./lib/main.js",
+  "scripts": {
+    "start": "node --use_strict lib/server.js",
+    "dev": "./node_modules/.bin/nodemon --use_strict lib/server.js",
+    "electron": "./node_modules/.bin/electron ./",
+    "forever": "forever start -a -l forever.log -o out.log -e err.log -c 'node --use_strict' lib/server.js"
+  },
+  "devDependencies": {
+    "electron-prebuilt": "^1.2.1",
+    "nodemon": "^1.8.1"
+  },
+  "dependencies": {
+    "bluebird": "^3.1.1",
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "morgan": "^1.6.1"
+  }
+}
